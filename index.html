@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Product Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 My Online Store</h1>
+  </header>
+
+  <main>
+    <!-- Part 1: CSS Animations -->
+    <section>
+      <h2>Featured Product</h2>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x150" alt="Product Image" class="product-img">
+        <h3>Wireless Headphones</h3>
+        <p class="price">$120</p>
+        <button class="btn" onclick="addToCart('Wireless Headphones', 120)">Add to Cart</button>
+      </div>
+    </section>
+
+    <!-- Part 2: Functions -->
+    <section>
+      <h2>Cart Summary</h2>
+      <p id="cart-output">Your cart is empty.</p>
+    </section>
+
+    <!-- Part 3: Popup Modal -->
+    <section>
+      <button class="btn secondary" onclick="togglePopup()">View Cart</button>
+      <div id="popup" class="popup">
+        <h3>🛒 Your Cart</h3>
+        <ul id="popup-list"></ul>
+        <p><strong>Total: $<span id="popup-total">0</span></strong></p>
+        <button class="btn close-btn" onclick="togglePopup()">Close</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
